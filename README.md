@@ -1,7 +1,7 @@
-#huge
+#huge-problem
 
 To compile:
-    make clean && make
+    `$ make clean && make`
 
 ## NAME
     huge-problem - demostrates a drawing library for the huge technical interview process.
@@ -16,7 +16,7 @@ To compile:
     [output file path] - specifies an output file to emit the results to.  Defaults to stdout if not provided.
 
 ## EXAMPLE
-    $ huge-problem test_data/input.txt test_data/output_new.txt
+    `$ huge-problem test_data/input.txt test_data/output_new.txt`
 
 ## AUTHOR
     James Birchall
