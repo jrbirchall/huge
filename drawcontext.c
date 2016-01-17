@@ -18,6 +18,8 @@ int addCanvas(DRAW_CONTEXT * pDc, int width, int height)
 
     pCanvasNode->pNext = pDc->pCanvasStack;
     pDc->pCanvasStack = pCanvasNode;
+
+    return E_OK;
 }
 
 int initDc(DRAW_CONTEXT * pDc)
@@ -39,6 +41,8 @@ int freeDc(DRAW_CONTEXT * pDc)
         free(pDc->pCanvasStack);
         pDc->pCanvasStack = pNode;
     }
+
+    return E_OK;
 }
 
 int printDc(DRAW_CONTEXT * pDc, FILE * fp)
@@ -49,6 +53,8 @@ int printDc(DRAW_CONTEXT * pDc, FILE * fp)
         printCanvas(pCanvasNode->pCanvas, fp);
         pCanvasNode = pCanvasNode->pNext;
     }
+
+    return E_OK;
 }
 
 int drawLine(DRAW_CONTEXT * pDc, int x1, int y1, int x2, int y2)

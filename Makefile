@@ -1,2 +1,2 @@
-huge-problem: main.c drawcontext.c canvas.c commands.c
-	gcc -o huge-problem main.c drawcontext.c canvas.c commands.c -I .
+huge-problem: huge-problem.c drawcontext.c canvas.c commands.c
+	gcc -Wall -o huge-problem huge-problem.c drawcontext.c canvas.c commands.c -I .

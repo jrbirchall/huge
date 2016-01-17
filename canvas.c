@@ -64,6 +64,8 @@ int printCanvas(CANVAS * pCanvas, FILE * fp)
     for (x =0; x < pCanvas->width + 2; x++)
         fputc('-', fp);
     fputc('\n', fp);
+
+    return E_OK;
 }
 
 /*
@@ -89,6 +91,8 @@ int drawCanvasLine(CANVAS * pCanvas, int x1, int y1, int x2, int y2)
         if (e2 > -dx){ err -= dy; x1 += sx; }
         if (e2 < dy){ err += dx; y1 += sy; }
     }
+
+    return E_OK;
 }
 
 int drawCanvasRect(CANVAS * pCanvas, int x1, int y1, int x2, int y2)
@@ -103,6 +107,8 @@ int drawCanvasRect(CANVAS * pCanvas, int x1, int y1, int x2, int y2)
     drawCanvasLine(pCanvas, x1, y2, x2, y2);
     drawCanvasLine(pCanvas, x2, y2, x2, y1);
     drawCanvasLine(pCanvas, x2, y1, x1, y1);
+
+    return E_OK;
 }
 
 typedef struct _POINT_NODE
@@ -196,5 +202,6 @@ int fillCanvas(CANVAS * pCanvas, int x, int y, COLOUR replacement_colour)
             }
         }
     }
+    return E_OK;
 }
 
