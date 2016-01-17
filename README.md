@@ -6,7 +6,7 @@ To compile:
     ```
 
 ## NAME
-    huge-problem - demostrates a drawing library for the huge technical interview process.
+    huge-problem - demonstrates a drawing library for the huge technical interview process.
 
 ## SYNOPSIS
     huge-problem [input file name] [output file name]
