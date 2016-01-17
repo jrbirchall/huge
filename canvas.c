@@ -45,16 +45,25 @@ int getPixel(CANVAS * pCanvas, int x, int y, COLOUR * c)
 int printCanvas(CANVAS * pCanvas, FILE * fp)
 {
     int x,y;
-    for (y = pCanvas->height - 1; y >= 0; y--)
+    for (x =0; x < pCanvas->width + 2; x++)
+        fputc('-', fp);
+    fputc('\n', fp);
+
+    for (y = 0; y < pCanvas->height; y++)
     {
+        fputc('|', fp);
         for (x = 0; x < pCanvas->width; x++){
             COLOUR c;
             getPixel(pCanvas, x, y, &c);
-            if (c.colour == '\0') c.colour = '.';
+            if (c.colour == '\0') c.colour = EMPTY_COLOUR.colour;
             fputc(c.colour, fp);
         }
+        fputc('|', fp);
         fputc('\n', fp);
     }
+    for (x =0; x < pCanvas->width + 2; x++)
+        fputc('-', fp);
+    fputc('\n', fp);
 }
 
 /*
