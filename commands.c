@@ -55,7 +55,7 @@ int parseRectArgs(FILE * fp, CMD_RECT_ARGS * pArgs)
 
 int parseFillArgs(FILE * fp, CMD_FILL_ARGS * pArgs)
 {
-    if (fscanf(fp, "%d %d %c\n", &(pArgs->x), &(pArgs->y), &(pArgs->colour)) < 3)
+    if (fscanf(fp, "%d %d %c\n", &(pArgs->x), &(pArgs->y), &(pArgs->colour.colour)) < 3)
         return E_BAD_ARG;
 
     // So, irritatingly, these numbers are supposed to be 1-indexed, and not 0 indexed as would be expected.

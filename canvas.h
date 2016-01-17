@@ -2,13 +2,7 @@
 #define FILE_CANVAS_H
 
 #include <stdio.h>
-
-typedef struct _COLOUR
-{
-    char colour;
-} COLOUR;
-static const COLOUR LINE_COLOUR = {.colour = 'x'};
-static const COLOUR EMPTY_COLOUR = {.colour = ' '};
+#include "colour.h"
 
 typedef struct _PIXEL
 {

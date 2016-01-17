@@ -2,6 +2,7 @@
 #define FILE_COMMANDS_H
 
 #include <stdio.h>
+#include "colour.h"
 
 typedef struct _CMD_ID
 {
@@ -39,7 +40,7 @@ typedef struct _CMD_FILL_ARGS
 {
     int x;
     int y;
-    char colour;
+    COLOUR colour;
 } CMD_FILL_ARGS;
 
 int readCmdId(FILE * fp, CMD_ID * pArgs);
